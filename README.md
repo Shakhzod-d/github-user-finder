@@ -6,13 +6,13 @@ A simple and modern React app built with **TypeScript**, **Vite**, and **TanStac
 
 ## 🧩 Features
 
-✅ **GitHub User Search** – Search for any GitHub username and instantly view their profile details.
-✅ **Repository Viewer** – Browse a user’s public repositories with infinite scrolling.
-✅ **Error Handling** – User-friendly error messages when a username doesn’t exist or an API error occurs.
-✅ **Loading States** – Smooth skeleton and loader components for a polished UX.
-✅ **Dark/Light Mode Toggle** – Switch between themes using a custom Zustand store.
-✅ **Local Storage Caching** – Avoid redundant API calls by caching fetched user and repository data.
-✅ **React Query Caching** – Utilizes React Query’s internal caching for better performance and reduced network usage.
+- ✅ **GitHub User Search** – Search for any GitHub username and instantly view their profile details.
+- ✅ **Repository Viewer** – Browse a user’s public repositories with infinite scrolling.
+- ✅ **Error Handling** – User-friendly error messages when a username doesn’t exist or an API error occurs.
+- ✅ **Loading States** – Smooth skeleton and loader components for a polished UX.
+- ✅ **Dark/Light Mode Toggle** – Switch between themes using a custom Zustand store.
+- ✅ **Local Storage Caching** – Avoid redundant API calls by caching fetched user and repository data.
+- ✅ **React Query Caching** – Utilizes React Query’s internal caching for better performance and reduced network usage.
 
 ---
 
