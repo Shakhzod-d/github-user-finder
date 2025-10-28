@@ -1,6 +1,6 @@
 # 🚀 GitHub User Explorer
 
-A simple and modern React app built with **TypeScript**, **Vite**, and **TanStack React Query** that lets you search for GitHub users, view their profiles, and browse their repositories — complete with **infinite scroll**, **dark mode**, and **local caching**.
+A simple and modern React app built with **TypeScript**, **Vite**, **MUI**, and **TanStack React Query** that lets you search for GitHub users, view their profiles, and browse their repositories — complete with **infinite scroll**, **dark mode**, and **local caching**.
 
 ---
 
