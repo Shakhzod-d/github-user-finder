@@ -1,73 +1,104 @@
-# React + TypeScript + Vite
+# 🚀 GitHub User Explorer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple and modern React app built with **TypeScript**, **Vite**, and **TanStack React Query** that lets you search for GitHub users, view their profiles, and browse their repositories — complete with **infinite scroll**, **dark mode**, and **local caching**.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🧩 Features
 
-## React Compiler
+✅ **GitHub User Search** – Search for any GitHub username and instantly view their profile details.
+✅ **Repository Viewer** – Browse a user’s public repositories with infinite scrolling.
+✅ **Error Handling** – User-friendly error messages when a username doesn’t exist or an API error occurs.
+✅ **Loading States** – Smooth skeleton and loader components for a polished UX.
+✅ **Dark/Light Mode Toggle** – Switch between themes using a custom Zustand store.
+✅ **Local Storage Caching** – Avoid redundant API calls by caching fetched user and repository data.
+✅ **React Query Caching** – Utilizes React Query’s internal caching for better performance and reduced network usage.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## ⚙️ Installation
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Make sure you have **Node.js v18+** and **npm** or **yarn** installed.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### 1️⃣ Clone the repository
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+git clone https://github.com/your-username/github-user-explorer.git
+cd github-user-explorer
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### 2️⃣ Install dependencies
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm install
 ```
+
+or
+
+```bash
+yarn install
+```
+
+### 3️⃣ Run the app
+
+```bash
+npm start
+```
+
+or
+
+```bash
+yarn dev
+```
+
+The app should now be running at:
+👉 **[http://localhost:5173/](http://localhost:5173/)** (Vite default port)
+
+---
+
+## 🧠 Tech Stack
+
+- ⚛️ **React + TypeScript**
+- ⚡ **Vite**
+- 🎨 **Material UI (MUI)**
+- 🧱 **Zustand** – For lightweight global state management
+- 🔁 **TanStack React Query v5** – For fetching, caching, and syncing GitHub API data
+- 🌐 **GitHub REST API** – Public endpoints for users and repositories
+
+---
+
+## 🧰 Extra Features Implemented
+
+| Feature                   | Description                                                        |
+| ------------------------- | ------------------------------------------------------------------ |
+| **Infinite Scroll**       | Loads repositories in batches as the user scrolls down.            |
+| **Local Storage Caching** | Caches GitHub user and repo data to prevent redundant API calls.   |
+| **React Query Cache**     | Keeps previously fetched data “fresh” for 5 minutes (`staleTime`). |
+| **Dark/Light Mode**       | Theme toggle powered by Zustand and Material UI.                   |
+| **Error Boundaries**      | Displays friendly messages like “User not found.”                  |
+
+---
+
+## 🧑‍💻 Folder Structure
+
+```
+src/
+├── components/       # Reusable UI components (SearchBar, ProfileCard, etc.)
+├── hooks/            # Custom hooks (useGithubUser, useGithubRepos)
+├── pages/            # Page components (Home)
+├── services/         # API service functions (GitHub API)
+├── store/            # Zustand stores
+├── utils/            # Helpers and constants (caching utils, constants)
+└── main.tsx          # App entry point
+```
+
+---
+
+## 🧹 Scripts
+
+| Command           | Description                      |
+| ----------------- | -------------------------------- |
+| `npm run dev`     | Start local dev server           |
+| `npm run build`   | Build for production             |
+| `npm run preview` | Preview production build locally |
+| `npm run lint`    | Run ESLint checks                |
